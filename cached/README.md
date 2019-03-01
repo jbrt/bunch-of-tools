@@ -20,11 +20,18 @@ def cached(func=None, redis_host: str = 'localhost', timeout: int = 60,
 
 ## Dependencies
 
-This tool used only Redis as dependency.
+This tool used only Redis as dependency and Python >= 3.6.
 
 ## Algorithm
 
-TBD
+This tool is using a Lazy Loading Algorithm: data will be fetched from the 
+Redis cache first and if the seeked data are not there, they will be 
+retrieve from the source. 
+
+Data are stored into Redis , indexed by a key, based on a MD5 hash of the 
+function arguments.
+
+By default, data will expire from Redis after 60 seconds.
 
 ## Example
 
