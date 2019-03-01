@@ -25,8 +25,6 @@ def cached(func=None, redis_host: str = 'localhost', timeout: int = 60,
     :param key_prefix: (str) a prefix for the redis keys (optional)
     :return: reference to the decorator function
     """
-    _name = 'cached-decorator'
-    logger.info(f'({_name}) Beginning work')
 
     # This code allow this decorator to decorate himself
     if not func:
@@ -38,6 +36,9 @@ def cached(func=None, redis_host: str = 'localhost', timeout: int = 60,
     # Will be used for the Redis key construction
     module_name = getmodule(func).__name__
     func_name = func.__name__
+
+    _name = 'cached-decorator'
+    logger.info(f'({_name}) Beginning work')
 
     @wraps(func)
     def decorated_function(service, *args, **kwargs):

@@ -46,7 +46,6 @@ if __name__ == '__main__':
 Console output when launched after the first launch:
 
 ````sh
-2019-02-27 17:19:46,475 INFO (cached-decorator) Beginning work
 2019-02-27 17:19:46,476 INFO (cached-decorator) Beginning work
 2019-02-27 17:19:46,485 INFO (cached-decorator) No key found in Redis load data from function
 2019-02-27 17:19:46,486 INFO (cached-decorator) End of decorator. Returns data
@@ -56,7 +55,6 @@ Hello John !
 Console output when launched after the second launch (just few seconds after):
 
 ````sh
-2019-02-27 17:20:12,590 INFO (cached-decorator) Beginning work
 2019-02-27 17:20:12,590 INFO (cached-decorator) Beginning work
 2019-02-27 17:20:12,599 INFO (cached-decorator) Found an active key in Redis (_cache___main__.display_hello.21b48b22581ff3caca703be2cfbf05e0)
 2019-02-27 17:20:12,600 INFO (cached-decorator) End of decorator. Returns data
